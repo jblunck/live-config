@@ -1,3 +1,12 @@
+live-config (3.0~a1-1) experimental; urgency=low
+
+  * Switching to source format 3.0 (quilt).
+  * Removing live-initramfs symlinks.
+  * Removing lenny support.
+  * Renumbering config scripts.
+
+ -- Daniel Baumann <daniel@debian.org>  Tue, 10 Aug 2010 01:00:23 +0200
+
 live-config (2.0.0-1) unstable; urgency=low
 
   * Improving grammar in the last changelog entry.
