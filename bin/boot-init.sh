@@ -174,7 +174,7 @@ if grep -qs "cdrom-detect/eject=false" /proc/cmdline || \
    grep -qs "noeject" /proc/cmdline || \
    grep -qs "find_iso" /proc/cmdline
 then
-	return
+	exit 0
 else
 	Eject
 fi
