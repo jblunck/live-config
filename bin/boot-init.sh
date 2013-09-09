@@ -80,10 +80,10 @@ get_boot_device()
 device_is_USB_flash_drive()
 {
 	# remove leading "/dev/" and all trailing numbers from input
-	DEVICE=$(expr substr ${1} 6 3)
+	DEVICE=$(expr substr "${1}" 6 3)
 
 	# check that device starts with "sd"
-	[ "$(expr substr ${DEVICE} 1 2)" != "sd" ] && return 1
+	[ "$(expr substr "${DEVICE}" 1 2)" != "sd" ] && return 1
 
 	# check that the device is an USB device
 	if readlink /sys/block/${DEVICE} | grep -q usb
