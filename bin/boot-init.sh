@@ -119,6 +119,9 @@ Eject ()
 		if [ -x /usr/bin/eject ]
 		then
 			eject -p -m /lib/live/mount/medium >/dev/null 2>&1
+			if [ $? -ne 0 -a -z "${BOOT_DEVICE}" ] ; then
+			    prompt=
+			fi
 		fi
 
 		case "${NOPROMPT}" in
